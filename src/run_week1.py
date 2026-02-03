@@ -2,6 +2,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+from pathlib import Path
+ROOT = Path(__file__).resolve().parents[1]  # src/.. = repo root
+FIG_DIR = ROOT / "results" / "figures"
+FIG_DIR.mkdir(parents=True, exist_ok=True)
+
 def simulate_imu(T=20.0, fs=200.0):
     """
     Simple synthetic IMU simulation:
